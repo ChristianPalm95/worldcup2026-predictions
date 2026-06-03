@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document
     .getElementById("saveBtn")
-    .addEventListener("click", saveForm);
+    .addEventListener("click", savePredictionForm);
 
 });
 
