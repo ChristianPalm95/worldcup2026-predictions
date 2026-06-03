@@ -90,6 +90,7 @@ let cardClass = "match-card";
 
 if(hoursToKickoff <= 72 && hoursToKickoff > 0){
   cardClass += " upcoming";
+}
 
           return `
             <div class="${cardClass}">
@@ -108,16 +109,6 @@ if(hoursToKickoff <= 72 && hoursToKickoff > 0){
   }
 
 </div>
-
-.soon-badge{
-  margin-left:10px;
-  background:#facc15;
-  color:#111827;
-  padding:2px 8px;
-  border-radius:999px;
-  font-size:11px;
-  font-weight:700;
-}
 
               <div class="match-row">
 
