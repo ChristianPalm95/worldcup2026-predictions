@@ -1,9 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>World Cup 2026</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Business Finance - FIFA World Cup 2026 Prediction Challenge</title>
+
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-World Cup 2026 Prediction Challenge
+
+<header class="hero">
+  <h1>🏆 Business Finance</h1>
+  <h2>FIFA World Cup 2026 Prediction Challenge</h2>
+</header>
+
+<section class="card">
+
+  <label>Select your name</label>
+
+  <select id="playerSelect">
+    <option value="">Choose player...</option>
+  </select>
+
+</section>
+
+<section class="card">
+
+  <h2>Bonus Questions</h2>
+
+  <label>World Champion (10 pts)</label>
+  <input id="worldChampion" type="text">
+
+  <label>Golden Boot Winner (5 pts)</label>
+  <input id="goldenBoot" type="text">
+
+  <label>Top Scoring Team (3 pts)</label>
+  <input id="topScoringTeam" type="text">
+
+</section>
+
+<section class="card">
+
+  <h2>Group Stage Matches</h2>
+
+  <div id="matchesContainer">
+    Loading matches...
+  </div>
+
+</section>
+
+<section class="card">
+
+  <button id="saveBtn">
+    Save Prediction
+  </button>
+
+</section>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+
 </body>
 </html>
