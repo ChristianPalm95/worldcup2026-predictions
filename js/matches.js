@@ -398,4 +398,204 @@ const MATCHES = [
   away: "Spain"
 },
 
+  // Group I
+
+{
+  id: "I1",
+  group: "I",
+  kickoff: "2026-06-16T21:00:00+02:00",
+  home: "France",
+  away: "Senegal"
+},
+
+{
+  id: "I2",
+  group: "I",
+  kickoff: "2026-06-17T00:00:00+02:00",
+  home: "Iraq",
+  away: "Norway"
+},
+
+{
+  id: "I3",
+  group: "I",
+  kickoff: "2026-06-22T23:00:00+02:00",
+  home: "France",
+  away: "Iraq"
+},
+
+{
+  id: "I4",
+  group: "I",
+  kickoff: "2026-06-23T02:00:00+02:00",
+  home: "Norway",
+  away: "Senegal"
+},
+
+{
+  id: "I5",
+  group: "I",
+  kickoff: "2026-06-26T21:00:00+02:00",
+  home: "Norway",
+  away: "France"
+},
+
+{
+  id: "I6",
+  group: "I",
+  kickoff: "2026-06-26T21:00:00+02:00",
+  home: "Senegal",
+  away: "Iraq"
+},
+
+// Group J
+
+{
+  id: "J1",
+  group: "J",
+  kickoff: "2026-06-17T03:00:00+02:00",
+  home: "Argentina",
+  away: "Algeria"
+},
+
+{
+  id: "J2",
+  group: "J",
+  kickoff: "2026-06-17T06:00:00+02:00",
+  home: "Austria",
+  away: "Jordan"
+},
+
+{
+  id: "J3",
+  group: "J",
+  kickoff: "2026-06-22T19:00:00+02:00",
+  home: "Argentina",
+  away: "Austria"
+},
+
+{
+  id: "J4",
+  group: "J",
+  kickoff: "2026-06-23T05:00:00+02:00",
+  home: "Jordan",
+  away: "Algeria"
+},
+
+{
+  id: "J5",
+  group: "J",
+  kickoff: "2026-06-28T04:00:00+02:00",
+  home: "Algeria",
+  away: "Austria"
+},
+
+{
+  id: "J6",
+  group: "J",
+  kickoff: "2026-06-28T04:00:00+02:00",
+  home: "Jordan",
+  away: "Argentina"
+},
+
+// Group K
+
+{
+  id: "K1",
+  group: "K",
+  kickoff: "2026-06-17T19:00:00+02:00",
+  home: "Portugal",
+  away: "DR Congo"
+},
+
+{
+  id: "K2",
+  group: "K",
+  kickoff: "2026-06-18T04:00:00+02:00",
+  home: "Uzbekistan",
+  away: "Colombia"
+},
+
+{
+  id: "K3",
+  group: "K",
+  kickoff: "2026-06-23T19:00:00+02:00",
+  home: "Portugal",
+  away: "Uzbekistan"
+},
+
+{
+  id: "K4",
+  group: "K",
+  kickoff: "2026-06-24T04:00:00+02:00",
+  home: "Colombia",
+  away: "DR Congo"
+},
+
+{
+  id: "K5",
+  group: "K",
+  kickoff: "2026-06-28T01:30:00+02:00",
+  home: "Colombia",
+  away: "Portugal"
+},
+
+{
+  id: "K6",
+  group: "K",
+  kickoff: "2026-06-28T01:30:00+02:00",
+  home: "DR Congo",
+  away: "Uzbekistan"
+},
+
+// Group L
+
+{
+  id: "L1",
+  group: "L",
+  kickoff: "2026-06-17T22:00:00+02:00",
+  home: "England",
+  away: "Croatia"
+},
+
+{
+  id: "L2",
+  group: "L",
+  kickoff: "2026-06-18T01:00:00+02:00",
+  home: "Ghana",
+  away: "Panama"
+},
+
+{
+  id: "L3",
+  group: "L",
+  kickoff: "2026-06-23T22:00:00+02:00",
+  home: "England",
+  away: "Ghana"
+},
+
+{
+  id: "L4",
+  group: "L",
+  kickoff: "2026-06-24T01:00:00+02:00",
+  home: "Panama",
+  away: "Croatia"
+},
+
+{
+  id: "L5",
+  group: "L",
+  kickoff: "2026-06-27T23:00:00+02:00",
+  home: "Panama",
+  away: "England"
+},
+
+{
+  id: "L6",
+  group: "L",
+  kickoff: "2026-06-27T23:00:00+02:00",
+  home: "Croatia",
+  away: "Ghana"
+}
+
 ];
