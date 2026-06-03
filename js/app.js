@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   loadPlayers();
   buildGroups();
 
+  document
+    .getElementById("saveBtn")
+    .addEventListener("click", saveForm);
+
 });
 
 function loadPlayers(){
@@ -123,5 +127,65 @@ function buildGroups(){
 
   container.innerHTML = "";
   container.appendChild(wrapper);
+
+}
+
+async function saveForm(){
+
+  const player =
+    document.getElementById("playerSelect").value;
+
+  if(!player){
+
+    alert("Vælg dit navn");
+
+    return;
+  }
+
+  const data = {
+
+    player,
+
+    worldChampion:
+      document.getElementById("worldChampion").value,
+
+    goldenBoot:
+      document.getElementById("goldenBoot").value,
+
+    topScoringTeam:
+      document.getElementById("topScoringTeam").value
+
+  };
+
+  MATCHES.forEach(match => {
+
+    data[`${match.id}_home`] =
+      document.getElementById(`${match.id}_home`)?.value || "";
+
+    data[`${match.id}_away`] =
+      document.getElementById(`${match.id}_away`)?.value || "";
+
+  });
+
+  try{
+
+    console.log(data);
+
+    const result =
+      await savePrediction(data);
+
+    console.log(result);
+
+    alert("Dine tips er gemt");
+
+  }
+
+  catch(error){
+
+    console.error(error);
+
+    alert("Kunne ikke gemme");
+
+  }
 
 }
