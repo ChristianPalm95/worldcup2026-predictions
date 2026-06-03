@@ -90,7 +90,9 @@ function buildGroups(){
 
               <div class="match-row">
 
-                <span>${match.home}</span>
+                <span class="team-name home">
+  ${match.home}
+</span>
 
                 <input
                   type="number"
@@ -108,7 +110,9 @@ function buildGroups(){
                   id="${match.id}_away"
                 >
 
-                <span>${match.away}</span>
+                <span class="team-name away">
+  ${match.away}
+</span>
 
               </div>
 
