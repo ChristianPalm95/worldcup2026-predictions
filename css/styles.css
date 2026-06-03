@@ -158,3 +158,8 @@ button{
   border:1px solid #cbd5e1;
   border-radius:6px;
 }
+
+.match-card.upcoming{
+  background:#fff9db;
+  border:2px solid #facc15;
+}
