@@ -81,8 +81,18 @@ function buildGroups(){
           const formatted =
             kickoff.toLocaleString("en-GB");
 
+          const now = new Date();
+
+const hoursToKickoff =
+  (kickoff - now) / (1000 * 60 * 60);
+
+let cardClass = "match-card";
+
+if(hoursToKickoff <= 72 && hoursToKickoff > 0){
+  cardClass += " upcoming";
+
           return `
-            <div class="match-card">
+            <div class="${cardClass}">
 
               <div class="match-date">
                 ${formatted}
