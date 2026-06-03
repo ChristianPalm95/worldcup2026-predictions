@@ -1,3 +1,5 @@
+alert("APP LOADED");
+
 document.addEventListener("DOMContentLoaded", async () => {
 
   const playerSelect =
