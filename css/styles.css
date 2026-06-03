@@ -117,17 +117,5 @@ button{
 .match-row{
   display:grid;
   grid-template-columns:
-    1fr
-    50px
-    20px
-    50px
-    1fr;
-
-  gap:8px;
-  align-items:center;
-}
-
-.score-input{
-  width:100%;
-  text-align:center;
-}
+    minmax(120px,1fr)
+    36px
