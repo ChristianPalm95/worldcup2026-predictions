@@ -1,67 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f7fb;
+  max-width:1400px;
+  margin:auto;
+  padding:20px;
+}
 
-  <title>Business Finance - FIFA World Cup 2026 Prediction Challenge</title>
+.hero{
+  text-align:center;
+  margin-bottom:30px;
+}
 
-  <link rel="stylesheet" href="css/styles.css">
-</head>
+.hero h1{
+  margin-bottom:5px;
+}
 
-<body>
+.card{
+  background:white;
+  padding:20px;
+  margin-bottom:20px;
+  border-radius:12px;
+  box-shadow:0 2px 6px rgba(0,0,0,.1);
+}
 
-<header class="hero">
-  <h1>🏆 Business Finance</h1>
-  <h2>FIFA World Cup 2026 Prediction Challenge</h2>
-</header>
+input,
+select{
+  width:100%;
+  padding:10px;
+  margin-top:8px;
+  margin-bottom:16px;
+  box-sizing:border-box;
+}
 
-<section class="card">
+button{
+  padding:12px 20px;
+  cursor:pointer;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+}
 
-  <label>Select your name</label>
+.group-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;
+}
 
-  <select id="playerSelect">
-    <option value="">Choose player...</option>
-  </select>
+.group-card{
+  border:1px solid #ddd;
+  border-radius:10px;
+  padding:15px;
+}
 
-</section>
+.group-card h3{
+  margin-top:0;
+  text-align:center;
+}
 
-<section class="card">
+.team{
+  padding:8px 0;
+  border-bottom:1px solid #eee;
+}
 
-  <h2>Bonus Questions</h2>
-
-  <label>World Champion (10 pts)</label>
-  <input id="worldChampion" type="text">
-
-  <label>Golden Boot Winner (5 pts)</label>
-  <input id="goldenBoot" type="text">
-
-  <label>Top Scoring Team (3 pts)</label>
-  <input id="topScoringTeam" type="text">
-
-</section>
-
-<section class="card">
-
-  <h2>Group Stage Matches</h2>
-
-  <div id="matchesContainer">
-    Loading matches...
-  </div>
-
-</section>
-
-<section class="card">
-
-  <button id="saveBtn">
-    Save Prediction
-  </button>
-
-</section>
-
-<script src="js/config.js"></script>
-<script src="js/api.js"></script>
-<script src="js/app.js"></script>
-
-</body>
-</html>
+.knockout-placeholder{
+  padding:20px;
+  border:1px dashed #999;
+  margin-bottom:10px;
+  text-align:center;
+  border-radius:10px;
+  background:#fafafa;
+}
