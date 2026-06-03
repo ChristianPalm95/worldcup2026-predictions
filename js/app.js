@@ -53,9 +53,16 @@ function buildGroups(){
 
   Object.entries(groups).forEach(([group, teams]) => {
 
-    const card = document.createElement("div");
+    const groupMatches =
+      MATCHES.filter(
+        match => match.group === group
+      );
 
-    card.className = "group-card";
+    const card =
+      document.createElement("div");
+
+    card.className =
+      "group-card";
 
     card.innerHTML = `
       <h3>Group ${group}</h3>
@@ -63,6 +70,53 @@ function buildGroups(){
       ${teams.map(team =>
         `<div class="team">${team}</div>`
       ).join("")}
+
+      <div class="matches">
+
+        ${groupMatches.map(match => {
+
+          const kickoff =
+            new Date(match.kickoff);
+
+          const formatted =
+            kickoff.toLocaleString("en-GB");
+
+          return `
+            <div class="match-card">
+
+              <div class="match-date">
+                ${formatted}
+              </div>
+
+              <div class="match-row">
+
+                <span>${match.home}</span>
+
+                <input
+                  type="number"
+                  min="0"
+                  class="score-input"
+                  id="${match.id}_home"
+                >
+
+                <span>-</span>
+
+                <input
+                  type="number"
+                  min="0"
+                  class="score-input"
+                  id="${match.id}_away"
+                >
+
+                <span>${match.away}</span>
+
+              </div>
+
+            </div>
+          `;
+        }).join("")}
+
+      </div>
     `;
 
     wrapper.appendChild(card);
