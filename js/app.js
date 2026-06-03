@@ -81,32 +81,16 @@ function buildGroups(){
           const formatted =
             kickoff.toLocaleString("en-GB");
 
-          const now = new Date();
-
-const hoursToKickoff =
-  (kickoff - now) / (1000 * 60 * 60);
-
-let cardClass = "match-card";
-
-if(hoursToKickoff <= 72 && hoursToKickoff > 0){
-  cardClass += " upcoming";
-}
+         const now = new Date();
 
           return `
-            <div class="${cardClass}">
+            <div class="match-card">
 
              <div class="match-date">
 
   ${formatted}
 
-  ${
-    hoursToKickoff <= 72 &&
-    hoursToKickoff > 0
 
-    ? '<span class="soon-badge">Starts Soon</span>'
-
-    : ''
-  }
 
 </div>
 
