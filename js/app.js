@@ -132,6 +132,8 @@ function buildGroups(){
 
 async function saveForm(){
 
+  console.log("SAVE BUTTON CLICKED");
+
   const player =
     document.getElementById("playerSelect").value;
 
