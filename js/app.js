@@ -1,6 +1,13 @@
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", () => {
 
-  const playerSelect =
+  loadPlayers();
+  buildGroups();
+
+});
+
+function loadPlayers(){
+
+  const select =
     document.getElementById("playerSelect");
 
   CONFIG.allowedPlayers.forEach(player => {
@@ -11,57 +18,48 @@ document.addEventListener("DOMContentLoaded", async () => {
     option.value = player;
     option.textContent = player;
 
-    playerSelect.appendChild(option);
+    select.appendChild(option);
 
   });
 
-  document
-    .getElementById("saveBtn")
-    .addEventListener("click", saveForm);
+}
 
-});
+function buildGroups(){
 
-async function saveForm() {
+  const container =
+    document.getElementById("groupsContainer");
 
-  const player =
-    document.getElementById("playerSelect").value;
+  if(!container) return;
 
-  if(!player){
+  const wrapper =
+    document.createElement("div");
 
-    alert("Choose your name");
+  wrapper.className =
+    "group-grid";
 
-    return;
-  }
+  const groups =
+    ["A","B","C","D","E","F","G","H","I","J","K","L"];
 
-  const data = {
+  groups.forEach(group => {
 
-    player,
+    const card =
+      document.createElement("div");
 
-    worldChampion:
-      document.getElementById("worldChampion").value,
+    card.className =
+      "group-card";
 
-    goldenBoot:
-      document.getElementById("goldenBoot").value,
+    card.innerHTML = `
+      <h3>Group ${group}</h3>
+      <div class="team">Team 1</div>
+      <div class="team">Team 2</div>
+      <div class="team">Team 3</div>
+      <div class="team">Team 4</div>
+    `;
 
-    topScoringTeam:
-      document.getElementById("topScoringTeam").value
+    wrapper.appendChild(card);
 
-  };
+  });
 
-  try{
-
-    await savePrediction(data);
-
-    alert("Prediction saved!");
-
-  }
-
-  catch(error){
-
-    console.error(error);
-
-    alert("Save failed");
-
-  }
+  container.appendChild(wrapper);
 
 }
