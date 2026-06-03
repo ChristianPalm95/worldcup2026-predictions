@@ -1,3 +1,4 @@
+console.log("MATCHES FILE LOADED");
 document.addEventListener("DOMContentLoaded", () => {
 
   loadPlayers();
