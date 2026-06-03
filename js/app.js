@@ -130,22 +130,17 @@ function buildGroups(){
 
 }
 
-async function saveForm(){
-
-  console.log("SAVE BUTTON CLICKED");
+async function savePredictionForm() {
 
   const player =
     document.getElementById("playerSelect").value;
 
-  if(!player){
-
-    alert("Vælg dit navn");
-
+  if (!player) {
+    alert("Choose your name");
     return;
   }
 
   const data = {
-
     player,
 
     worldChampion:
@@ -156,37 +151,24 @@ async function saveForm(){
 
     topScoringTeam:
       document.getElementById("topScoringTeam").value
-
   };
 
-  MATCHES.forEach(match => {
+  try {
 
-    data[`${match.id}_home`] =
-      document.getElementById(`${match.id}_home`)?.value || "";
-
-    data[`${match.id}_away`] =
-      document.getElementById(`${match.id}_away`)?.value || "";
-
-  });
-
-  try{
-
-    console.log(data);
+    console.log("Saving...", data);
 
     const result =
       await savePrediction(data);
 
     console.log(result);
 
-    alert("Dine tips er gemt");
+    alert("Prediction saved!");
 
-  }
-
-  catch(error){
+  } catch(error) {
 
     console.error(error);
 
-    alert("Kunne ikke gemme");
+    alert("Save failed");
 
   }
 
