@@ -103,3 +103,46 @@ function calculateGroupTable(group) {
     });
 
 }
+
+function renderGroupTable(group) {
+
+  const container =
+    document.getElementById(
+      `table_${group}`
+    );
+
+  if (!container) return;
+
+  const standings =
+    calculateGroupTable(group);
+
+  container.innerHTML = `
+    <table class="standings-table">
+      <thead>
+        <tr>
+          <th>Team</th>
+          <th>P</th>
+          <th>W</th>
+          <th>D</th>
+          <th>L</th>
+          <th>GD</th>
+          <th>Pts</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${standings.map(team => `
+          <tr>
+            <td>${team.team}</td>
+            <td>${team.played}</td>
+            <td>${team.won}</td>
+            <td>${team.drawn}</td>
+            <td>${team.lost}</td>
+            <td>${team.goalsFor - team.goalsAgainst}</td>
+            <td>${team.points}</td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>
+  `;
+
+}
