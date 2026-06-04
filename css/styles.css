@@ -188,3 +188,9 @@ input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
 }
+
+#saveStatus {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
