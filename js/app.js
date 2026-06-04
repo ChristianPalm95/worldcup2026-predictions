@@ -140,23 +140,47 @@ async function savePredictionForm() {
     return;
   }
 
-  const data = {
-    player,
+ const data = {
 
-    worldChampion:
-      document.getElementById("worldChampion").value,
+  player,
 
-    goldenBoot:
-      document.getElementById("goldenBoot").value,
+  worldChampion:
+    document.getElementById("worldChampion").value,
 
-    topScoringTeam:
-      document.getElementById("topScoringTeam").value
+  goldenBoot:
+    document.getElementById("goldenBoot").value,
+
+  topScoringTeam:
+    document.getElementById("topScoringTeam").value,
+
+  matches: {}
+
+};
+
+  MATCHES.forEach(match => {
+
+  data.matches[match.id] = {
+
+    home:
+      document.getElementById(
+        `${match.id}_home`
+      )?.value || "",
+
+    away:
+      document.getElementById(
+        `${match.id}_away`
+      )?.value || ""
+
   };
+
+});
 
   try {
 
     console.log("Saving...", data);
 
+    console.log(data);
+    
     const result =
       await savePrediction(data);
 
