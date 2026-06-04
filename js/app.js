@@ -217,6 +217,48 @@ async function loadPlayerPrediction() {
 
     console.log("Loaded", data);
 
+    document.getElementById(
+      "worldChampion"
+    ).value =
+      data.worldChampion || "";
+
+    document.getElementById(
+      "goldenBoot"
+    ).value =
+      data.goldenBoot || "";
+
+    document.getElementById(
+      "topScoringTeam"
+    ).value =
+      data.topScoringTeam || "";
+
+    if (data.matches) {
+
+      Object.entries(data.matches)
+        .forEach(([matchId, score]) => {
+
+          const homeInput =
+            document.getElementById(
+              `${matchId}_home`
+            );
+
+          const awayInput =
+            document.getElementById(
+              `${matchId}_away`
+            );
+
+          if (homeInput)
+            homeInput.value =
+              score.home || "";
+
+          if (awayInput)
+            awayInput.value =
+              score.away || "";
+
+        });
+
+    }
+
   } catch(error) {
 
     console.error(error);
