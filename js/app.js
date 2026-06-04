@@ -27,6 +27,13 @@ function loadPlayers(){
 
   });
 
+  select.addEventListener(
+    "change",
+    loadPlayerPrediction
+  );
+
+}
+
 }
 
 function buildGroups(){
