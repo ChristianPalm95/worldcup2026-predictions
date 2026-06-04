@@ -204,3 +204,25 @@ async function savePredictionForm() {
   }
 
 }
+
+async function loadPlayerPrediction() {
+
+  const player =
+    document.getElementById("playerSelect").value;
+
+  if (!player) return;
+
+  try {
+
+    const data =
+      await loadPrediction(player);
+
+    console.log("Loaded", data);
+
+  } catch(error) {
+
+    console.error(error);
+
+  }
+
+}
