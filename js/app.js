@@ -129,9 +129,18 @@ function buildGroups(){
         }).join("")}
 
       </div>
+
+      <div
+        class="group-standings"
+        id="table_${group}"
+      >
+      </div>
+
     `;
 
     wrapper.appendChild(card);
+    
+    renderGroupTable(group);
 
   });
 
