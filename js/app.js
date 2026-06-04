@@ -139,13 +139,16 @@ function buildGroups(){
     `;
 
     wrapper.appendChild(card);
-    
-    renderGroupTable(group);
 
   });
 
-  container.innerHTML = "";
-  container.appendChild(wrapper);
+container.innerHTML = "";
+
+container.appendChild(wrapper);
+
+Object.keys(GROUPS).forEach(group => {
+  renderGroupTable(group);
+});
 
 }
 
