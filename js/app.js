@@ -34,8 +34,6 @@ function loadPlayers(){
 
 }
 
-}
-
 function buildGroups(){
 
   const container =
