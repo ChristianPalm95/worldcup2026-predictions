@@ -173,3 +173,18 @@ button{
   font-size:11px;
   font-weight:700;
 }
+
+/* Fjern pilene i Chrome, Edge og Safari */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Fjern pilene i Firefox */
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
