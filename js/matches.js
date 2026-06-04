@@ -3,7 +3,7 @@ const MATCHES = [
   {
     id: "A1",
     group: "A",
-    kickoff: "2026-06-03T21:00:00+02:00",
+    kickoff: "2026-06-11T21:00:00+02:00",
     home: "Mexico",
     away: "South Africa"
   },
