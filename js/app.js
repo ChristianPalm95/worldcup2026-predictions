@@ -212,8 +212,46 @@ async function loadPlayerPrediction() {
 
   try {
 
-    const data =
-      await loadPrediction(player);
+   const data =
+  await loadPrediction(player);
+
+// Ryd alle kampfelter først
+
+MATCHES.forEach(match => {
+
+  const homeInput =
+    document.getElementById(
+      `${match.id}_home`
+    );
+
+  const awayInput =
+    document.getElementById(
+      `${match.id}_away`
+    );
+
+  if (homeInput)
+    homeInput.value = "";
+
+  if (awayInput)
+    awayInput.value = "";
+
+});
+
+// Ryd øvrige felter
+
+document.getElementById(
+  "worldChampion"
+).value = "";
+
+document.getElementById(
+  "goldenBoot"
+).value = "";
+
+document.getElementById(
+  "topScoringTeam"
+).value = "";
+
+console.log("Loaded", data);
 
     console.log("Loaded", data);
 
