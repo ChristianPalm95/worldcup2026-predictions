@@ -80,6 +80,9 @@ function buildGroups(){
 
          const now = new Date();
 
+          const locked =
+  now >= kickoff;
+
           return `
             <div class="match-card">
 
@@ -98,20 +101,22 @@ function buildGroups(){
 </span>
 
                 <input
-                  type="number"
-                  min="0"
-                  class="score-input"
-                  id="${match.id}_home"
-                >
+  type="number"
+  min="0"
+  class="score-input"
+  id="${match.id}_home"
+  ${locked ? "disabled" : ""}
+>
 
                 <span>-</span>
 
-                <input
-                  type="number"
-                  min="0"
-                  class="score-input"
-                  id="${match.id}_away"
-                >
+             <input
+  type="number"
+  min="0"
+  class="score-input"
+  id="${match.id}_away"
+  ${locked ? "disabled" : ""}
+>
 
                 <span class="team-name away">
   ${match.away}
