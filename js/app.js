@@ -64,6 +64,12 @@ function buildGroups(){
     card.innerHTML = `
       <h3>Group ${group}</h3>
 
+     <div
+  class="group-standings"
+  id="table_${group}"
+>
+</div> 
+
       ${teams.map(team =>
         `<div class="team">${team}</div>`
       ).join("")}
@@ -128,12 +134,6 @@ function buildGroups(){
           `;
         }).join("")}
 
-      </div>
-
-      <div
-        class="group-standings"
-        id="table_${group}"
-      >
       </div>
 
     `;
