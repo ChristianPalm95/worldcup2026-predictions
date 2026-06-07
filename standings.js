@@ -130,17 +130,18 @@ function renderGroupTable(group) {
 
   container.innerHTML = `
     <table class="standings-table">
-      <thead>
-        <tr>
-          <th>Team</th>
-          <th>P</th>
-          <th>W</th>
-          <th>D</th>
-          <th>L</th>
-          <th>GD</th>
-          <th>Pts</th>
-        </tr>
-      </thead>
+    <thead>
+  <tr>
+    <th>#</th>
+    <th>Team</th>
+    <th>P</th>
+    <th>W</th>
+    <th>D</th>
+    <th>L</th>
+    <th>GD</th>
+    <th>Pts</th>
+  </tr>
+</thead>
       <tbody>
         ${standings.map(team => `
           <tr>
