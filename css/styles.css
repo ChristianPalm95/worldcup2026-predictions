@@ -215,8 +215,8 @@ input[type="number"] {
 
 .standings-table th:first-child,
 .standings-table td:first-child {
-  width: 220px;
-  min-width: 220px;
+  width: 120px;
+  min-width: 120px;
   text-align: left;
   white-space: nowrap;
 }
