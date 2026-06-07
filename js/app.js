@@ -102,22 +102,24 @@ function buildGroups(){
   ${match.home}
 </span>
 
-                <input
+ <input
   type="number"
   min="0"
   class="score-input"
   id="${match.id}_home"
   ${locked ? "disabled" : ""}
+  oninput="renderGroupTable('${group}')"
 >
 
                 <span>-</span>
 
-             <input
+  <input
   type="number"
   min="0"
   class="score-input"
   id="${match.id}_away"
   ${locked ? "disabled" : ""}
+  oninput="renderGroupTable('${group}')"
 >
 
                 <span class="team-name away">
