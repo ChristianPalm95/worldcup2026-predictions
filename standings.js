@@ -45,11 +45,17 @@ function calculateGroupTable(group) {
       return;
     }
 
-    const home =
-      table[match.home];
+ console.log(
+  "HOME:",
+  match.home,
+  table[match.home]
+);
 
-    const away =
-      table[match.away];
+console.log(
+  "AWAY:",
+  match.away,
+  table[match.away]
+);
 
     home.played++;
     away.played++;
