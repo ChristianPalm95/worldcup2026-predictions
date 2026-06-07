@@ -258,9 +258,9 @@ input[type="number"] {
 
 .standings-table th:nth-child(2),
 .standings-table td:nth-child(2) {
-  width: 100px;
-  min-width: 100px;
-  max-width: 100px;
+  width: 90px;
+  min-width: 90px;
+  max-width: 90px;
 
   text-align: left;
 
