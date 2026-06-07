@@ -45,7 +45,13 @@ function calculateGroupTable(group) {
       return;
     }
 
- console.log(
+const home =
+  table[match.home];
+
+const away =
+  table[match.away];
+
+console.log(
   "HOME:",
   match.home,
   table[match.home]
@@ -55,6 +61,7 @@ console.log(
   "AWAY:",
   match.away,
   table[match.away]
+);
 );
 
     home.played++;
