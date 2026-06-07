@@ -227,3 +227,11 @@ input[type="number"] {
 
   vertical-align: middle;
 }
+
+.standings-table th,
+.standings-table td {
+  border: 1px solid #ddd;
+  padding: 6px;
+  text-align: center;
+  vertical-align: middle;
+}
