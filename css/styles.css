@@ -215,8 +215,15 @@ input[type="number"] {
 
 .standings-table th:first-child,
 .standings-table td:first-child {
-  width: 100px;
-  min-width: 100px;
+  width: 180px;
+  min-width: 180px;
   text-align: left;
-  white-space: nowrap;
+
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.standings-table tbody tr {
+  height: 55px;
 }
