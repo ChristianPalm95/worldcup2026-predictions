@@ -55,7 +55,18 @@ button{
 
 .group-card h3{
   text-align:center;
-  margin-bottom:12px;
+
+  background:#dbeafe;
+  color:#1e3a8a;
+
+  padding:10px 16px;
+  margin-bottom:15px;
+
+  border-radius:10px;
+
+  font-size:18px;
+  font-weight:700;
+}
 }
 
 .team{
