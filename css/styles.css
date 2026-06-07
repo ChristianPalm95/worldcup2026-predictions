@@ -245,8 +245,13 @@ input[type="number"] {
 
 .standings-table th:first-child,
 .standings-table td:first-child {
-  width: 100px;
-  min-width: 100px;
+  width: 35px;
+  text-align: center;
+}
+
+.standings-table th:nth-child(2),
+.standings-table td:nth-child(2) {
+  width: 180px;
   text-align: left;
 
   white-space: normal;
