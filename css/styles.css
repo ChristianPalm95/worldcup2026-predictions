@@ -218,9 +218,10 @@ input[type="number"] {
 }
 
 .standings-table td:first-child {
-  width: 120px;
-  min-width: 120px;
-  height: 40px;
+  width: 140px;
+  min-width: 140px;
+  vertical-align: middle;
+}
 
   white-space: normal;
   word-break: break-word;
