@@ -62,7 +62,6 @@ console.log(
   match.away,
   table[match.away]
 );
-);
 
     home.played++;
     away.played++;
