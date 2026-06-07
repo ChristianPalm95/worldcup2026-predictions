@@ -215,3 +215,14 @@ input[type="number"] {
 .standings-table td:first-child {
   text-align: left;
 }
+
+.standings-table td:first-child {
+  width: 120px;
+  min-width: 120px;
+  height: 40px;
+
+  white-space: normal;
+  word-break: break-word;
+
+  vertical-align: middle;
+}
