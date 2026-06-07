@@ -70,10 +70,6 @@ function buildGroups(){
 >
 </div> 
 
-      ${teams.map(team =>
-        `<div class="team">${team}</div>`
-      ).join("")}
-
       <div class="matches">
 
         ${groupMatches.map(match => {
