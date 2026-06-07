@@ -257,3 +257,10 @@ input[type="number"] {
 .standings-table tbody tr {
   height: 55px;
 }
+
+.group-grid,
+.card,
+.hero{
+  position:relative;
+  z-index:1;
+}
