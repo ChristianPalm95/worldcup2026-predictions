@@ -143,17 +143,18 @@ function renderGroupTable(group) {
   </tr>
 </thead>
       <tbody>
-        ${standings.map(team => `
-          <tr>
-            <td>${team.team}</td>
-            <td>${team.played}</td>
-            <td>${team.won}</td>
-            <td>${team.drawn}</td>
-            <td>${team.lost}</td>
-            <td>${team.goalsFor - team.goalsAgainst}</td>
-            <td>${team.points}</td>
-          </tr>
-        `).join("")}
+     ${standings.map((team, index) => `
+  <tr>
+    <td>${index + 1}</td>
+    <td>${team.team}</td>
+    <td>${team.played}</td>
+    <td>${team.won}</td>
+    <td>${team.drawn}</td>
+    <td>${team.lost}</td>
+    <td>${team.goalsFor - team.goalsAgainst}</td>
+    <td>${team.points}</td>
+  </tr>
+`).join("")}
       </tbody>
     </table>
   `;
