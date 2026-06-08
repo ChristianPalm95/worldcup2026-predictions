@@ -10,117 +10,60 @@
 </head>
 
 <body>
+
+  <!-- NAV BUTTONS -->
   <div style="display:flex; gap:10px; justify-content:center; margin:20px 0;">
-  <button onclick="showPredictions()">Predictions</button>
-  <button onclick="showLeaderboard()">Leaderboard</button>
-</div>
+    <button onclick="showPredictions()">Predictions</button>
+    <button onclick="showLeaderboard()">Leaderboard</button>
+  </div>
 
-<header class="hero">
-  <h1>🏆 Business Finance</h1>
-  <h2>FIFA World Cup 2026 Prediction Challenge</h2>
-</header>
+  <!-- HEADER -->
+  <header class="hero">
+    <h1>🏆 Business Finance</h1>
+    <h2>FIFA World Cup 2026 Prediction Challenge</h2>
+  </header>
 
-<div id="predictionsView">
-<section class="card">
+  <!-- PREDICTIONS VIEW -->
+  <div id="predictionsView">
 
-  <label>Select your name</label>
+    <section class="card">
+      <label>Select your name</label>
+      <select id="playerSelect">
+        <option value="">Choose player...</option>
+      </select>
+    </section>
 
-  <select id="playerSelect">
-    <option value="">Choose player...</option>
-  </select>
+    <section class="card">
+      <h2>Bonus Questions</h2>
 
-</section>
+      <label>World Champion (10 pts)</label>
+      <input id="worldChampion" type="text">
 
-<section class="card">
+      <label>Golden Boot Winner (5 pts)</label>
+      <input id="goldenBoot" type="text">
 
-  <h2>Bonus Questions</h2>
+      <label>Top Scoring Team (3 pts)</label>
+      <input id="topScoringTeam" type="text">
+    </section>
 
-  <label>World Champion (10 pts)</label>
-  <input id="worldChampion" type="text">
+    <section class="card">
+      <h2>Group Stage Matches</h2>
+      <div id="groupsContainer"></div>
+    </section>
 
-  <label>Golden Boot Winner (5 pts)</label>
-  <input id="goldenBoot" type="text">
+    <section class="card">
+      <h2>Knockout Stage</h2>
+      ...
+    </section>
 
-  <label>Top Scoring Team (3 pts)</label>
-  <input id="topScoringTeam" type="text">
+    <section class="card">
+      <button id="saveBtn">Save Prediction</button>
+      <div id="saveStatus"></div>
+    </section>
 
-</section>
+  </div>
 
-<section class="card">
-
-  <h2>Group Stage Matches</h2>
-
-  <div id="groupsContainer"></div>
-
-</section>
-
-<section class="card">
-
-  <h2>Knockout Stage</h2>
-
-  ...
-
-</section>
-
-<section class="card">
-
-  <button id="saveBtn">
-    Save Prediction
-  </button>
-
-  <div id="saveStatus"></div>
-
-</section>
-
-<script src="js/config.js"></script>
-<script src="js/groups.js"></script>
-<script src="js/matches.js"></script>
-<script src="js/api.js"></script>
-<script src="standings.js"></script>
-<script src="js/app.js"></script>
-
-<script>
-async function loadLeaderboard() {
-
-  console.log("LOAD START");
-
-  const url = "https://script.google.com/macros/s/AKfycbzWXhYmtIo5ecM8Obg8PPRmnA262N1uUzTpQmRvYXuRI4jubsWvU2_cn3BiBPGuEmka/exec";
-
-  try {
-
-    const res = await fetch(url);
-    console.log("FETCH STATUS:", res.status);
-
-    const text = await res.text();
-    console.log("RAW RESPONSE:", text);
-
-    const data = JSON.parse(text);
-    console.log("PARSED DATA:", data);
-
-    if (!Array.isArray(data)) {
-      document.getElementById("leaderboard").innerHTML =
-        "Not array: " + JSON.stringify(data);
-      return;
-    }
-
-  <script>
-
-<script>
-function showPredictions() {
-  document.getElementById("predictionsView").style.display = "block";
-  document.getElementById("leaderboardView").style.display = "none";
-}
-
-  <div id="predictionsView"></div>
-
-<div id="leaderboardView" style="display:none;">
-  <section class="card">
-    <h2>Leaderboard 🏆</h2>
-    <div id="leaderboard">Loading...</div>
-  </section>
-</div>
-  <!-- ALT DIT HTML INDHOLD HER -->
-
+  <!-- LEADERBOARD VIEW -->
   <div id="leaderboardView" style="display:none;">
     <section class="card">
       <h2>Leaderboard 🏆</h2>
@@ -128,56 +71,68 @@ function showPredictions() {
     </section>
   </div>
 
-<script>
-const API_URL = "https://script.google.com/macros/s/AKfycbzWXhYmtIo5ecM8Obg8PPRmnA262N1uUzTpQmRvYXuRI4jubsWvU2_cn3BiBPGuEmka/exec";
+  <!-- SCRIPTS -->
+  <script src="js/config.js"></script>
+  <script src="js/groups.js"></script>
+  <script src="js/matches.js"></script>
+  <script src="js/api.js"></script>
+  <script src="standings.js"></script>
+  <script src="js/app.js"></script>
 
-function showPredictions() {
-  document.getElementById("predictionsView").style.display = "block";
-  document.getElementById("leaderboardView").style.display = "none";
-}
+  <script>
+    const API_URL = "https://script.google.com/macros/s/AKfycbzWXhYmtIo5ecM8Obg8PPRmnA262N1uUzTpQmRvYXuRI4jubsWvU2_cn3BiBPGuEmka/exec";
 
-function showLeaderboard() {
-  document.getElementById("predictionsView").style.display = "none";
-  document.getElementById("leaderboardView").style.display = "block";
-  loadLeaderboard();
-}
+    function showPredictions() {
+      document.getElementById("predictionsView").style.display = "block";
+      document.getElementById("leaderboardView").style.display = "none";
+    }
 
-async function loadLeaderboard() {
+    function showLeaderboard() {
+      document.getElementById("predictionsView").style.display = "none";
+      document.getElementById("leaderboardView").style.display = "block";
+      loadLeaderboard();
+    }
 
-  const container = document.getElementById("leaderboard");
+    async function loadLeaderboard() {
 
-  container.innerHTML = "Loading...";
+      const container = document.getElementById("leaderboard");
 
-  const res = await fetch(API_URL);
-  const data = await res.json();
+      try {
+        container.innerHTML = "Loading...";
 
-  if (!Array.isArray(data)) {
-    container.innerHTML = "No data";
-    return;
-  }
+        const res = await fetch(API_URL);
+        const data = await res.json();
 
-  let html = "";
+        if (!Array.isArray(data)) {
+          container.innerHTML = "No data received";
+          return;
+        }
 
-  data.forEach((p, index) => {
+        let html = "";
 
-    let medal = "";
-    if (index === 0) medal = "🥇";
-    else if (index === 1) medal = "🥈";
-    else if (index === 2) medal = "🥉";
+        data.forEach((p, index) => {
 
-    html += `
-      <div style="display:flex;justify-content:space-between;padding:10px;margin:6px 0;background:#f4f4f4;border-radius:8px;">
-        <div>${medal} ${p.player}</div>
-        <div><b>${p.points}</b></div>
-      </div>
-    `;
-  });
+          let medal = "";
+          if (index === 0) medal = "🥇";
+          else if (index === 1) medal = "🥈";
+          else if (index === 2) medal = "🥉";
 
-  container.innerHTML = html;
-}
-</script>
+          html += `
+            <div style="display:flex;justify-content:space-between;padding:10px;margin:6px 0;background:#f4f4f4;border-radius:8px;">
+              <div>${medal} ${p.player}</div>
+              <div><b>${p.points}</b></div>
+            </div>
+          `;
+        });
+
+        container.innerHTML = html;
+
+      } catch (err) {
+        console.error(err);
+        container.innerHTML = "Error loading leaderboard";
+      }
+    }
+  </script>
 
 </body>
-      
-  </body>
 </html>
