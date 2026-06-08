@@ -10,12 +10,17 @@
 </head>
 
 <body>
+  <div style="display:flex; gap:10px; justify-content:center; margin:20px 0;">
+  <button onclick="showPredictions()">Predictions</button>
+  <button onclick="showLeaderboard()">Leaderboard</button>
+</div>
 
 <header class="hero">
   <h1>🏆 Business Finance</h1>
   <h2>FIFA World Cup 2026 Prediction Challenge</h2>
 </header>
 
+<div id="predictionsView">
 <section class="card">
 
   <label>Select your name</label>
@@ -74,5 +79,60 @@
 <script src="standings.js"></script>
 <script src="js/app.js"></script>
 
+<script>
+async function loadLeaderboard() {
+
+  const url = "DIN_APPS_SCRIPT_URL";
+
+  const res = await fetch(url);
+  const data = await res.json();
+
+  let html = "";
+
+  data.forEach((p, index) => {
+
+    let medal = "";
+    if (index === 0) medal = "🥇";
+    else if (index === 1) medal = "🥈";
+    else if (index === 2) medal = "🥉";
+
+    html += `
+      <div style="display:flex;justify-content:space-between;padding:8px;margin:6px 0;background:#f4f4f4;border-radius:6px;">
+        <div>${medal} ${p.player}</div>
+        <div><b>${p.points}</b></div>
+      </div>
+    `;
+  });
+
+  document.getElementById("leaderboard").innerHTML = html;
+}
+</script>
+
+<script>
+function showPredictions() {
+  document.getElementById("predictionsView").style.display = "block";
+  document.getElementById("leaderboardView").style.display = "none";
+}
+
+function showLeaderboard() {
+  document.getElementById("predictionsView").style.display = "none";
+  document.getElementById("leaderboardView").style.display = "block";
+  loadLeaderboard();
+}
+</script>
+  
 </body>
 </html>
+
+</div>
+
+<div id="leaderboardView" style="display:none;">
+
+  <section class="card">
+
+    <h2>Leaderboard 🏆</h2>
+    <div id="leaderboard">Loading...</div>
+
+  </section>
+
+</div>
