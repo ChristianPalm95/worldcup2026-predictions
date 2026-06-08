@@ -103,6 +103,30 @@ async function loadLeaderboard() {
       return;
     }
 
+  <script>
+async function loadLeaderboard() {
+
+  console.log("LOAD START");
+
+  const url = "https://script.google.com/macros/s/AKfycbzWXhYmtIo5ecM8Obg8PPRmnA262N1uUzTpQmRvYXuRI4jubsWvU2_cn3BiBPGuEmka/exec";
+
+  try {
+
+    const res = await fetch(url);
+    console.log("FETCH STATUS:", res.status);
+
+    const text = await res.text();
+    console.log("RAW RESPONSE:", text);
+
+    const data = JSON.parse(text);
+    console.log("PARSED DATA:", data);
+
+    if (!Array.isArray(data)) {
+      document.getElementById("leaderboard").innerHTML =
+        "Not array: " + JSON.stringify(data);
+      return;
+    }
+
     let html = "";
 
     data.forEach((p, index) => {
@@ -121,6 +145,26 @@ async function loadLeaderboard() {
     });
 
     document.getElementById("leaderboard").innerHTML = html;
+
+  } catch (err) {
+    console.error("ERROR:", err);
+    document.getElementById("leaderboard").innerHTML =
+      "Fetch error (check console)";
+  }
+}
+
+function showPredictions() {
+  document.getElementById("predictionsView").style.display = "block";
+  document.getElementById("leaderboardView").style.display = "none";
+}
+
+function showLeaderboard() {
+  console.log("clicked leaderboard");
+  document.getElementById("predictionsView").style.display = "none";
+  document.getElementById("leaderboardView").style.display = "block";
+  loadLeaderboard();
+}
+</script>
 
   } catch (err) {
     console.error("ERROR:", err);
