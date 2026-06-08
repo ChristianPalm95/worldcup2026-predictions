@@ -89,6 +89,7 @@ async function loadLeaderboard() {
 
   let html = "";
 
+  if (!Array.isArray(data)) return;
   data.forEach((p, index) => {
 
     let medal = "";
