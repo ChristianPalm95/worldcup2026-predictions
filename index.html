@@ -82,14 +82,51 @@
 <script>
 async function loadLeaderboard() {
 
+  console.log("LOAD START");
+
   const url = "https://script.google.com/macros/s/AKfycbzWXhYmtIo5ecM8Obg8PPRmnA262N1uUzTpQmRvYXuRI4jubsWvU2_cn3BiBPGuEmka/exec";
 
- const res = await fetch(url);
-const data = await res.json();
+  try {
 
-if (!Array.isArray(data)) {
-  document.getElementById("leaderboard").innerHTML = "Error loading leaderboard";
-  return;
+    const res = await fetch(url);
+    console.log("FETCH STATUS:", res.status);
+
+    const text = await res.text();
+    console.log("RAW RESPONSE:", text);
+
+    const data = JSON.parse(text);
+    console.log("PARSED DATA:", data);
+
+    if (!Array.isArray(data)) {
+      document.getElementById("leaderboard").innerHTML =
+        "Not array: " + JSON.stringify(data);
+      return;
+    }
+
+    let html = "";
+
+    data.forEach((p, index) => {
+
+      let medal = "";
+      if (index === 0) medal = "🥇";
+      else if (index === 1) medal = "🥈";
+      else if (index === 2) medal = "🥉";
+
+      html += `
+        <div style="display:flex;justify-content:space-between;padding:8px;margin:6px 0;background:#f4f4f4;border-radius:6px;">
+          <div>${medal} ${p.player}</div>
+          <div><b>${p.points}</b></div>
+        </div>
+      `;
+    });
+
+    document.getElementById("leaderboard").innerHTML = html;
+
+  } catch (err) {
+    console.error("ERROR:", err);
+    document.getElementById("leaderboard").innerHTML =
+      "Fetch error (check console)";
+  }
 }
 
 let html = "";
