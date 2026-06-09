@@ -294,3 +294,15 @@ input[type="number"] {
   position:relative;
   z-index:1;
 }
+
+#predictionsView{
+  background:#f8f3e8;
+  padding:20px;
+  border-radius:16px;
+}
+
+#leaderboardView{
+  background:#eef6ff;
+  padding:20px;
+  border-radius:16px;
+}
