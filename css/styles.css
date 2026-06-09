@@ -1,23 +1,16 @@
 body{
   font-family:Arial,Helvetica,sans-serif;
 
-  background-color:#f5f7fb;
+  background:
+    linear-gradient(
+      rgba(245,247,251,0.85),
+      rgba(245,247,251,0.85)
+    ),
+    url("assets/worldcup-background.webp.webp");
 
-  background-image:
-    url("assets/football.png"),
-    url("assets/worldcup-trophy.png");
-
-  background-repeat:
-    repeat-y,
-    repeat-y;
-
-  background-position:
-    left 20px top,
-    right 20px top;
-
-  background-size:
-    80px,
-    80px;
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
 
   max-width:1400px;
   margin:auto;
