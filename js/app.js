@@ -91,21 +91,33 @@ const hoursToKickoff =
   (kickoff - now) / (1000 * 60 * 60);
 
 const upcoming =
+  hoursToKickoff > 24 &&
+  hoursToKickoff <= 72;
+
+const urgent =
   hoursToKickoff > 0 &&
-  hoursToKickoff <= 7200;
+  hoursToKickoff <= 24;
 
           return `
-           <div class="match-card ${upcoming ? "upcoming" : ""}">
+  <div class="match-card ${
+  warning
+    ? "warning"
+    : upcoming
+    ? "upcoming"
+    : ""
+}">
 
 <div class="match-date">
 
   ${formatted}
 
-  ${
-    upcoming
-      ? '<span class="soon-badge">Starts within 72h</span>'
-      : ''
-  }
+${
+  warning
+    ? '<span class="warning-badge">Starts within 24h</span>'
+    : upcoming
+    ? '<span class="soon-badge">Starts within 72h</span>'
+    : ''
+}
 
 </div>
 
