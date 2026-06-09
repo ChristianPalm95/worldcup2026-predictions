@@ -27,10 +27,13 @@ background:
 }
 
 .card{
-  background:rgba(248,243,232,0.96);
+  background:rgba(248,243,232,0.80);
+
   padding:20px;
   margin-bottom:20px;
+
   border-radius:12px;
+
   box-shadow:0 2px 6px rgba(0,0,0,.1);
 }
 
