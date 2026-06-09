@@ -3,8 +3,8 @@ body{
 
 background:
   linear-gradient(
-    rgba(245,247,251,0.50),
-    rgba(245,247,251,0.50)
+    rgba(245,247,251,0.30),
+    rgba(245,247,251,0.30)
   ),
     url("../assets/worldcup-background.webp.webp");
 
