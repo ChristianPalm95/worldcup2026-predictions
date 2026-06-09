@@ -116,12 +116,13 @@
           else if (index === 1) medal = "🥈";
           else if (index === 2) medal = "🥉";
 
-          html += `
-            <div style="display:flex;justify-content:space-between;padding:10px;margin:6px 0;background:#f4f4f4;border-radius:8px;">
-              <div>${medal} ${p.player}</div>
-              <div><b>${p.points}</b></div>
-            </div>
-          `;
+html += `
+  <div style="display:grid;grid-template-columns:40px 1fr 70px;gap:10px;align-items:center;padding:10px;margin:6px 0;background:#f4f4f4;border-radius:8px;">
+    <div><b>${index + 1}</b></div>
+    <div>${medal} ${p.player}</div>
+    <div style="text-align:right;"><b>${p.points}</b></div>
+  </div>
+`;
         });
 
         container.innerHTML = html;
