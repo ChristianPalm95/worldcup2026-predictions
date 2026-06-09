@@ -107,7 +107,23 @@
           return;
         }
 
-        let html = "";
+   let html = `
+  <div style="
+    display:grid;
+    grid-template-columns:30px 1fr 70px 70px 80px;
+    gap:10px;
+    padding:10px;
+    font-weight:bold;
+    border-bottom:2px solid #ddd;
+    margin-bottom:8px;
+  ">
+    <div>#</div>
+    <div>Player</div>
+    <div style="text-align:center;">Pts</div>
+    <div style="text-align:center;">Exact</div>
+    <div style="text-align:center;">Outcome</div>
+  </div>
+`;
 
         data.forEach((p, index) => {
 
@@ -119,7 +135,7 @@
 html += `
   <div style="
     display:grid;
-    grid-template-columns:30px 1fr 120px;
+grid-template-columns:30px 1fr 70px 70px 80px;
     gap:10px;
     align-items:center;
     padding:12px;
@@ -132,28 +148,21 @@ html += `
       <b>${index + 1}</b>
     </div>
 
-    <div>
+ <div>
   ${medal} ${p.player}
 </div>
 
- <div style="
-  text-align:right;
-  font-size:14px;
-">
-  <b style="font-size:20px;">
-    ${p.points}
-  </b>
+<div style="text-align:center;">
+  <b>${p.points}</b>
+</div>
 
-  <div style="
-    font-size:11px;
-    color:#666;
-    margin-top:2px;
-  ">
-    ${p.exactScores} exact
-    |
-    ${p.correctOutcomes} outcome
-  </div>
-</div>   
+<div style="text-align:center;">
+  ${p.exactScores}
+</div>
+
+<div style="text-align:center;">
+  ${p.correctOutcomes}
+</div>
 
   </div>
 `;
