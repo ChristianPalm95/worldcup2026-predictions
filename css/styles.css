@@ -1,11 +1,11 @@
 body{
   font-family:Arial,Helvetica,sans-serif;
 
-  background:
-    linear-gradient(
-      rgba(245,247,251,0.85),
-      rgba(245,247,251,0.85)
-    ),
+background:
+  linear-gradient(
+    rgba(245,247,251,0.50),
+    rgba(245,247,251,0.50)
+  ),
     url("../assets/worldcup-background.webp.webp");
 
   background-size:cover;
