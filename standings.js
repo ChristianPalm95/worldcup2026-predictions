@@ -51,17 +51,10 @@ const home =
 const away =
   table[match.away];
 
-console.log(
-  "HOME:",
-  match.home,
-  table[match.home]
-);
-
-console.log(
-  "AWAY:",
-  match.away,
-  table[match.away]
-);
+if (!home || !away) {
+  console.warn("Team mismatch:", match);
+  return;
+}
 
     home.played++;
     away.played++;
