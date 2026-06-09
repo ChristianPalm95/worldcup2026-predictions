@@ -15,6 +15,7 @@
   <div style="display:flex; gap:10px; justify-content:center; margin:20px 0;">
     <button onclick="showPredictions()">Predictions</button>
     <button onclick="showLeaderboard()">Leaderboard</button>
+    <button onclick="showAdmin()">Admin Results</button>
   </div>
 
   <!-- HEADER -->
@@ -78,6 +79,26 @@
     </section>
   </div>
 
+  <div id="adminView" style="display:none;">
+  <section class="card">
+    <h2>Admin Results</h2>
+
+    <p>
+      Enter official match results here.
+    </p>
+
+    <div id="adminResultsContainer">
+      Loading matches...
+    </div>
+
+    <button onclick="saveOfficialResults()">
+      Save Official Results
+    </button>
+
+    <div id="adminSaveStatus"></div>
+  </section>
+</div>
+
   <!-- SCRIPTS -->
   <script src="js/config.js"></script>
   <script src="js/groups.js"></script>
@@ -88,16 +109,27 @@
 
   <script>
 
-    function showPredictions() {
-      document.getElementById("predictionsView").style.display = "block";
-      document.getElementById("leaderboardView").style.display = "none";
-    }
+   function showPredictions() {
+  document.getElementById("predictionsView").style.display = "block";
+  document.getElementById("leaderboardView").style.display = "none";
+  document.getElementById("adminView").style.display = "none";
+}
 
-    function showLeaderboard() {
-      document.getElementById("predictionsView").style.display = "none";
-      document.getElementById("leaderboardView").style.display = "block";
-      loadLeaderboard();
-    }
+function showLeaderboard() {
+  document.getElementById("predictionsView").style.display = "none";
+  document.getElementById("leaderboardView").style.display = "block";
+  document.getElementById("adminView").style.display = "none";
+
+  loadLeaderboard();
+}
+
+function showAdmin() {
+  document.getElementById("predictionsView").style.display = "none";
+  document.getElementById("leaderboardView").style.display = "none";
+  document.getElementById("adminView").style.display = "block";
+
+  buildAdminResults();
+}
 
     async function loadLeaderboard() {
 
@@ -191,6 +223,62 @@ html += `
         container.innerHTML = "Error loading leaderboard";
       }
     }
+
+    function buildAdminResults() {
+
+  const container =
+    document.getElementById(
+      "adminResultsContainer"
+    );
+
+  let html = "";
+
+  MATCHES.forEach(match => {
+
+    html += `
+      <div style="
+        display:grid;
+        grid-template-columns:70px 1fr 50px 20px 50px;
+        gap:8px;
+        align-items:center;
+        padding:8px;
+        margin:6px 0;
+        background:#f4f4f4;
+        border-radius:8px;
+      ">
+
+        <div>
+          <b>${match.id}</b>
+        </div>
+
+        <div>
+          ${match.home} vs ${match.away}
+        </div>
+
+        <input
+          type="number"
+          min="0"
+          id="official_${match.id}_home"
+          style="width:50px;"
+        >
+
+        <div>-</div>
+
+        <input
+          type="number"
+          min="0"
+          id="official_${match.id}_away"
+          style="width:50px;"
+        >
+
+      </div>
+    `;
+
+  });
+
+  container.innerHTML = html;
+
+}
   </script>
   
 </body>
