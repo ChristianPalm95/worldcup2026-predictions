@@ -349,6 +349,10 @@ console.log("Loaded", data);
 
     }
 
+Object.keys(GROUPS).forEach(group => {
+  renderGroupTable(group);
+});
+
   } catch(error) {
 
     console.error(error);
