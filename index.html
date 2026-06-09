@@ -64,8 +64,15 @@
   </div>
 
   <!-- LEADERBOARD VIEW -->
-  <div id="leaderboardView" style="display:none;">
-    <section class="card">
+ <div id="leaderboardView" style="display:none;">
+
+  <section
+    class="card"
+    style="
+      max-width:800px;
+      margin:0 auto;
+    "
+  >
       <h2>Leaderboard 🏆</h2>
       <div id="leaderboard">Loading...</div>
     </section>
@@ -110,7 +117,7 @@
    let html = `
   <div style="
     display:grid;
-    grid-template-columns:30px 1fr 70px 70px 80px;
+grid-template-columns:25px 1fr 50px 50px 60px;
     gap:10px;
     padding:10px;
     font-weight:bold;
@@ -135,7 +142,7 @@
 html += `
   <div style="
     display:grid;
-grid-template-columns:30px 1fr 70px 70px 80px;
+grid-template-columns:25px 1fr 50px 50px 60px;
     gap:10px;
     align-items:center;
     padding:12px;
