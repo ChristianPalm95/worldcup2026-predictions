@@ -92,7 +92,7 @@ const hoursToKickoff =
 
 const upcoming =
   hoursToKickoff > 0 &&
-  hoursToKickoff <= 72;
+  hoursToKickoff <= 7200;
 
           return `
            <div class="match-card ${upcoming ? "upcoming" : ""}">
