@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   loadPlayers();
   buildGroups();
 
+    lockBonusQuestionsIfTournamentStarted();
+
   document
     .getElementById("saveBtn")
     .addEventListener("click", savePredictionForm);
@@ -325,5 +327,21 @@ console.log("Loaded", data);
     console.error(error);
 
   }
+
+}
+
+function lockBonusQuestionsIfTournamentStarted() {
+
+  const tournamentStart =
+    new Date("2026-06-11T21:00:00+02:00");
+
+  const now =
+    new Date();
+
+  if (now < tournamentStart) return;
+
+  document.getElementById("worldChampion").disabled = true;
+  document.getElementById("goldenBoot").disabled = true;
+  document.getElementById("topScoringTeam").disabled = true;
 
 }
