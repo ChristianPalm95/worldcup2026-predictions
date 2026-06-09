@@ -139,15 +139,24 @@ grid-template-columns:25px 1fr 50px 50px 60px;
           else if (index === 1) medal = "🥈";
           else if (index === 2) medal = "🥉";
 
+const rowColor =
+  index === 0
+    ? "#fef3c7"
+    : index === 1
+    ? "#e5e7eb"
+    : index === 2
+    ? "#fed7aa"
+    : "#f4f4f4";
+
 html += `
   <div style="
     display:grid;
-grid-template-columns:25px 1fr 50px 50px 60px;
-    gap:10px;
+    grid-template-columns:25px 220px 50px 50px 60px;
+    gap:6px;
     align-items:center;
     padding:12px;
     margin:6px 0;
-    background:#f4f4f4;
+    background:${rowColor};
     border-radius:8px;
   ">
 
