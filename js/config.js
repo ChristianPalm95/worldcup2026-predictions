@@ -11,8 +11,8 @@ const CONFIG = {
   },
 
   allowedPlayers: [
-    "Store Mikkel",
-    "Lille Mikkel",
+    "Mikkel L",
+    "Mikkel E - Norwegian Messi",
     "Christian",
     "Jacob",
     "Jane",
