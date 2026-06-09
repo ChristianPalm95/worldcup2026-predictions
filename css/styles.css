@@ -6,7 +6,7 @@ body{
       rgba(245,247,251,0.85),
       rgba(245,247,251,0.85)
     ),
-    url("assets/worldcup-background.webp.webp");
+    url("../assets/worldcup-background.webp.webp");
 
   background-size:cover;
   background-position:center;
