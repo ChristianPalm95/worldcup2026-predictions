@@ -99,9 +99,11 @@ const urgent =
   hoursToKickoff <= 24;
 
           return `
-  <div class="match-card ${
-  warning
-    ? "warning"
+<div class="match-card ${
+  locked
+    ? "locked"
+    : urgent
+    ? "urgent"
     : upcoming
     ? "upcoming"
     : ""
@@ -112,8 +114,10 @@ const urgent =
   ${formatted}
 
 ${
-  warning
-    ? '<span class="warning-badge">Starts within 24h</span>'
+  locked
+    ? '<span class="locked-badge">Locked</span>'
+    : urgent
+    ? '<span class="urgent-badge">Starts within 24h</span>'
     : upcoming
     ? '<span class="soon-badge">Starts within 72h</span>'
     : ''
