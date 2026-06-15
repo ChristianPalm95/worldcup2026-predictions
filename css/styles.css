@@ -352,8 +352,9 @@ input[type="number"] {
 }
 
 .match-points-table th{
-  background:rgba(255,255,255,0.95);
-  font-weight:700;
+  height: 70px;
+  padding: 8px 4px;
+  vertical-align: middle;
 }
 
 .match-points-table th:first-child,
