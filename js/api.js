@@ -23,7 +23,7 @@ async function loadPrediction(player) {
 
 }
 
-async function loadMatchPoints() {
+async function fetchMatchPoints() {
 
   const response =
     await fetch(
