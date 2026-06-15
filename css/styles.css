@@ -359,7 +359,7 @@ input[type="number"] {
 
 .match-points-table th:first-child,
 .match-points-table td:first-child{
-  min-width:220px;
+  min-width:300px;
   text-align:left;
   position:sticky;
   left:0;
