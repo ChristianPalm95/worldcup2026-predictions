@@ -394,12 +394,9 @@ function lockBonusQuestionsIfTournamentStarted() {
 async function loadMatchPoints() {
 
   const container =
-    document.getElementById(
-      "matchPointsContainer"
-    );
+    document.getElementById("matchPointsContainer");
 
-  container.innerHTML =
-    "Loading...";
+  container.innerHTML = "Loading...";
 
   try {
 
@@ -407,51 +404,67 @@ async function loadMatchPoints() {
       await fetchMatchPoints();
 
     let html = `
-      <table class="standings-table">
-        <thead>
-          <tr>
-            <th>Match</th>
-            <th>Result</th>
-            ${data.players.map(player => `
-              <th>${player}</th>
-            `).join("")}
-          </tr>
-        </thead>
-        <tbody>
+      <div class="match-points-wrapper">
+        <table class="match-points-table">
+          <thead>
+            <tr>
+              <th>Match</th>
+              <th>Result</th>
+              ${data.players.map(player => `
+                <th>${player}</th>
+              `).join("")}
+            </tr>
+          </thead>
+          <tbody>
     `;
 
     data.rows.forEach(row => {
 
       html += `
         <tr>
-          <td>${row.match}</td>
+          <td>
+            <b>${row.match}</b><br>
+            <span>${row.matchText}</span>
+          </td>
+
           <td>${row.result}</td>
 
-          ${data.players.map(player => `
-            <td>
-              ${row.players[player]}
-            </td>
-          `).join("")}
+          ${data.players.map(player => {
 
+            const points =
+              row.players[player];
+
+            const className =
+              points === 3
+                ? "points-exact"
+                : points === 1
+                ? "points-outcome"
+                : "points-zero";
+
+            return `
+              <td class="${className}">
+                ${points === 0 ? "" : points}
+              </td>
+            `;
+
+          }).join("")}
         </tr>
       `;
 
     });
 
     html += `
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </div>
     `;
 
-    container.innerHTML =
-      html;
+    container.innerHTML = html;
 
   } catch(error) {
 
     console.error(error);
-
-    container.innerHTML =
-      "Failed to load";
+    container.innerHTML = "Failed to load match points";
 
   }
 
