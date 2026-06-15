@@ -244,35 +244,6 @@ async function savePredictionForm() {
 
     console.log("Saving...", data);
 
-    const result =
-      await savePrediction(data);
-
-    console.log(result);
-
-    const now =
-      new Date();
-
-    document.getElementById(
-      "saveStatus"
-    ).textContent =
-      `Last saved: ${now.toLocaleString("da-DK")}`;
-
-    alert("Prediction saved!");
-
-  } catch(error) {
-
-    console.error(error);
-
-    alert("Save failed");
-
-  }
-
-}
-
-  try {
-
-    console.log("Saving...", data);
-
     console.log(data);
     
     const result =
