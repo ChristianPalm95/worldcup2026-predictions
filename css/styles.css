@@ -348,7 +348,7 @@ input[type="number"] {
   padding:6px;
   text-align:center;
   vertical-align:middle;
-  min-width:55px;
+  width:60px;
 }
 
 .match-points-table th{
@@ -401,4 +401,17 @@ input[type="number"] {
 .player-name{
   font-size:14px;
   font-weight:700;
+}
+
+.match-points-table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+}
+
+.player-name{
+  font-size:12px;
+  font-weight:700;
+  line-height:1.1;
+  word-break:break-word;
 }
