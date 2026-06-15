@@ -99,6 +99,13 @@
   </section>
 </div>
 
+  <div id="matchPointsView" style="display:none;">
+  <section class="card">
+    <h2>Match Points Breakdown</h2>
+    <div id="matchPointsContainer">Loading...</div>
+  </section>
+</div>
+
   <!-- SCRIPTS -->
   <script src="js/config.js"></script>
   <script src="js/groups.js"></script>
@@ -113,22 +120,23 @@
   document.getElementById("predictionsView").style.display = "block";
   document.getElementById("leaderboardView").style.display = "none";
   document.getElementById("adminView").style.display = "none";
+  document.getElementById("matchPointsView").style.display = "none";
 }
 
 function showLeaderboard() {
   document.getElementById("predictionsView").style.display = "none";
   document.getElementById("leaderboardView").style.display = "block";
   document.getElementById("adminView").style.display = "none";
-
+  document.getElementById("matchPointsView").style.display = "none";
   loadLeaderboard();
 }
 
-function showAdmin() {
+function showMatchPoints() {
   document.getElementById("predictionsView").style.display = "none";
   document.getElementById("leaderboardView").style.display = "none";
-  document.getElementById("adminView").style.display = "block";
+  document.getElementById("matchPointsView").style.display = "block";
 
-  buildAdminResults();
+  loadMatchPoints();
 }
 
     async function loadLeaderboard() {
