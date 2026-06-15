@@ -390,3 +390,69 @@ function lockBonusQuestionsIfTournamentStarted() {
   document.getElementById("topScoringTeam").disabled = true;
 
 }
+
+async function loadMatchPoints() {
+
+  const container =
+    document.getElementById(
+      "matchPointsContainer"
+    );
+
+  container.innerHTML =
+    "Loading...";
+
+  try {
+
+    const data =
+      await fetchMatchPoints();
+
+    let html = `
+      <table class="standings-table">
+        <thead>
+          <tr>
+            <th>Match</th>
+            <th>Result</th>
+            ${data.players.map(player => `
+              <th>${player}</th>
+            `).join("")}
+          </tr>
+        </thead>
+        <tbody>
+    `;
+
+    data.rows.forEach(row => {
+
+      html += `
+        <tr>
+          <td>${row.match}</td>
+          <td>${row.result}</td>
+
+          ${data.players.map(player => `
+            <td>
+              ${row.players[player]}
+            </td>
+          `).join("")}
+
+        </tr>
+      `;
+
+    });
+
+    html += `
+        </tbody>
+      </table>
+    `;
+
+    container.innerHTML =
+      html;
+
+  } catch(error) {
+
+    console.error(error);
+
+    container.innerHTML =
+      "Failed to load";
+
+  }
+
+}
