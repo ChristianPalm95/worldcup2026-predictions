@@ -410,9 +410,16 @@ async function loadMatchPoints() {
             <tr>
               <th>Match</th>
               <th>Result</th>
-              ${data.players.map(player => `
-                <th>${player}</th>
-              `).join("")}
+            ${data.players.map((player, index) => `
+  <th>
+    <div class="player-rank">
+      #${index + 1}
+    </div>
+    <div class="player-name">
+      ${player}
+    </div>
+  </th>
+`).join("")}
             </tr>
           </thead>
           <tbody>
