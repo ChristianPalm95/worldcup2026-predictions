@@ -189,56 +189,85 @@ async function savePredictionForm() {
     return;
   }
 
- const data = {
+  const data = {
 
-  player,
+    player,
 
-  worldChampion:
-    document.getElementById("worldChampion").value,
+    worldChampion:
+      document.getElementById("worldChampion").value,
 
-  goldenBoot:
-    document.getElementById("goldenBoot").value,
+    goldenBoot:
+      document.getElementById("goldenBoot").value,
 
-  topScoringTeam:
-    document.getElementById("topScoringTeam").value,
+    topScoringTeam:
+      document.getElementById("topScoringTeam").value,
 
-  matches: {}
-
-   const existingData =
-  await loadPrediction(player);
-
-data.matches =
-  existingData.matches || {};
-
-};
-
-MATCHES.forEach(match => {
-
-  const kickoff =
-    new Date(match.kickoff);
-
-  const now =
-    new Date();
-
-  if (now >= kickoff) {
-    return;
-  }
-
-  data.matches[match.id] = {
-
-    home:
-      document.getElementById(
-        `${match.id}_home`
-      )?.value || "",
-
-    away:
-      document.getElementById(
-        `${match.id}_away`
-      )?.value || ""
+    matches: {}
 
   };
 
-});
+  const existingData =
+    await loadPrediction(player);
+
+  data.matches =
+    existingData.matches || {};
+
+  MATCHES.forEach(match => {
+
+    const kickoff =
+      new Date(match.kickoff);
+
+    const now =
+      new Date();
+
+    if (now >= kickoff) {
+      return;
+    }
+
+    data.matches[match.id] = {
+
+      home:
+        document.getElementById(
+          `${match.id}_home`
+        )?.value || "",
+
+      away:
+        document.getElementById(
+          `${match.id}_away`
+        )?.value || ""
+
+    };
+
+  });
+
+  try {
+
+    console.log("Saving...", data);
+
+    const result =
+      await savePrediction(data);
+
+    console.log(result);
+
+    const now =
+      new Date();
+
+    document.getElementById(
+      "saveStatus"
+    ).textContent =
+      `Last saved: ${now.toLocaleString("da-DK")}`;
+
+    alert("Prediction saved!");
+
+  } catch(error) {
+
+    console.error(error);
+
+    alert("Save failed");
+
+  }
+
+}
 
   try {
 
