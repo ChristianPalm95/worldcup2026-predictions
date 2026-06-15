@@ -409,7 +409,6 @@ async function loadMatchPoints() {
           <thead>
             <tr>
               <th>Match</th>
-              <th>Result</th>
             ${data.players.map((player, index) => `
   <th>
     <div class="player-rank">
@@ -436,8 +435,6 @@ async function loadMatchPoints() {
             <b>${row.match}</b><br>
             <span>${row.matchText}</span>
           </td>
-
-          <td>${row.result}</td>
 
           ${data.players.map(player => {
 
