@@ -345,10 +345,10 @@ input[type="number"] {
 .match-points-table th,
 .match-points-table td{
   border:1px solid #ddd;
-  padding:10px;
+  padding:6px;
   text-align:center;
   vertical-align:middle;
-  min-width:70px;
+  min-width:55px;
 }
 
 .match-points-table th{
@@ -358,7 +358,7 @@ input[type="number"] {
 
 .match-points-table th:first-child,
 .match-points-table td:first-child{
-  min-width:220px;
+  min-width:170px;
   text-align:left;
   position:sticky;
   left:0;
