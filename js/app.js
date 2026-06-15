@@ -206,7 +206,17 @@ async function savePredictionForm() {
 
 };
 
-  MATCHES.forEach(match => {
+MATCHES.forEach(match => {
+
+  const kickoff =
+    new Date(match.kickoff);
+
+  const now =
+    new Date();
+
+  if (now >= kickoff) {
+    return;
+  }
 
   data.matches[match.id] = {
 
