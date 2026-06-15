@@ -411,8 +411,7 @@ input[type="number"] {
 }
 
 .player-name{
-  font-size:12px;
+  font-size:14px;
   font-weight:700;
-  line-height:1.1;
-  word-break:break-word;
+  line-height:1.2;
 }
