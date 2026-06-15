@@ -204,6 +204,12 @@ async function savePredictionForm() {
 
   matches: {}
 
+   const existingData =
+  await loadPrediction(player);
+
+data.matches =
+  existingData.matches || {};
+
 };
 
 MATCHES.forEach(match => {
