@@ -416,7 +416,10 @@ async function loadMatchPoints() {
       #${index + 1}
     </div>
     <div class="player-name">
-      ${player}
+      ${player.replace(
+  "Mikkel E - Norwegian Messi",
+  "Mikkel E"
+)}
     </div>
   </th>
 `).join("")}
