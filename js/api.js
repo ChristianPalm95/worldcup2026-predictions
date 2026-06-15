@@ -22,3 +22,14 @@ async function loadPrediction(player) {
   return await response.json();
 
 }
+
+async function loadMatchPoints() {
+
+  const response =
+    await fetch(
+      `${API_URL}?action=matchPoints`
+    );
+
+  return await response.json();
+
+}
