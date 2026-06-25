@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   loadPlayers();
   buildGroups();
+  buildKnockoutStage();
 
     lockBonusQuestionsIfTournamentStarted();
 
