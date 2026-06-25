@@ -1,5 +1,9 @@
 console.log("MATCHES FILE LOADED");
-document.addEventListener("DOMContentLoaded", () => {
+let OFFICIAL_RESULTS = {};
+document.addEventListener("DOMContentLoaded", async () => {
+
+  OFFICIAL_RESULTS =
+    await fetchOfficialResults();
 
   loadPlayers();
   buildGroups();
