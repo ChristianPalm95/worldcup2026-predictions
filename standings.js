@@ -24,15 +24,22 @@ function calculateGroupTable(group) {
 
   matches.forEach(match => {
 
-    const homeScore =
-      parseInt(
+const official =
+  OFFICIAL_RESULTS[match.id];
+
+const homeScore =
+  official
+    ? Number(official.home)
+    : parseInt(
         document.getElementById(
           `${match.id}_home`
         )?.value
       );
 
-    const awayScore =
-      parseInt(
+const awayScore =
+  official
+    ? Number(official.away)
+    : parseInt(
         document.getElementById(
           `${match.id}_away`
         )?.value
