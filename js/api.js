@@ -33,3 +33,14 @@ async function fetchMatchPoints() {
   return await response.json();
 
 }
+
+async function fetchOfficialResults() {
+
+  const response =
+    await fetch(
+      `${API_URL}?action=results`
+    );
+
+  return await response.json();
+
+}
