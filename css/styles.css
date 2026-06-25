@@ -415,3 +415,10 @@ input[type="number"] {
   font-weight:700;
   line-height:1.2;
 }
+
+.official-result{
+  margin-top:6px;
+  font-size:13px;
+  font-weight:700;
+  color:#15803d;
+}
