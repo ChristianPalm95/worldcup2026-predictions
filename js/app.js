@@ -127,6 +127,14 @@ ${
     : ''
 }
 
+${
+  OFFICIAL_RESULTS[match.id]
+    ? `<div class="official-result">
+         Official: ${OFFICIAL_RESULTS[match.id].home}-${OFFICIAL_RESULTS[match.id].away}
+       </div>`
+    : ""
+}
+
 </div>
 
               <div class="match-row">
