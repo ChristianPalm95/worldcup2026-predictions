@@ -532,7 +532,7 @@ input[type="number"] {
 /* Knockout bracket spacing */
 
 .knockout-round:nth-child(1) .knockout-match{
-  margin-bottom:18px;
+  margin-bottom:0px;
 }
 
 .knockout-round:nth-child(2){
@@ -540,7 +540,7 @@ input[type="number"] {
 }
 
 .knockout-round:nth-child(2) .knockout-match{
-  margin-bottom:160px;
+  margin-bottom:0px;
 }
 
 .knockout-round:nth-child(3){
@@ -548,7 +548,7 @@ input[type="number"] {
 }
 
 .knockout-round:nth-child(3) .knockout-match{
-  margin-bottom:450px;
+  margin-bottom:0px;
 }
 
 .knockout-round:nth-child(4){
@@ -556,7 +556,7 @@ input[type="number"] {
 }
 
 .knockout-round:nth-child(4) .knockout-match{
-  margin-bottom:1050px;
+  margin-bottom:0px;
 }
 
 .knockout-round:nth-child(5),
