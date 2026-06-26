@@ -550,7 +550,7 @@ input[type="number"] {
 
 .knockout-round:nth-child(5),
 .knockout-round:nth-child(6){
-  padding-top:360px;
+  padding-top:10px;
 }
 
 /* Match Points: freeze header row and first column */
