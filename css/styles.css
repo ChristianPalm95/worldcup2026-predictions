@@ -541,11 +541,11 @@ input[type="number"] {
 }
 
 .knockout-round:nth-child(4){
-  padding-top:40px;
+  padding-top:400px;
 }
 
 .knockout-round:nth-child(4) .knockout-match{
-  margin-bottom:520px;
+  margin-bottom:900px;
 }
 
 .knockout-round:nth-child(5),
