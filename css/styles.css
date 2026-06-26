@@ -518,14 +518,37 @@ input[type="number"] {
 
 /* Lidt mere afstand mellem senere runder */
 
+/* Knockout bracket spacing */
+
+.knockout-round:nth-child(1) .knockout-match{
+  margin-bottom:18px;
+}
+
+.knockout-round:nth-child(2){
+  padding-top:50px;
+}
+
 .knockout-round:nth-child(2) .knockout-match{
-  margin-bottom:70px;
+  margin-bottom:115px;
+}
+
+.knockout-round:nth-child(3){
+  padding-top:125px;
 }
 
 .knockout-round:nth-child(3) .knockout-match{
-  margin-bottom:160px;
+  margin-bottom:280px;
+}
+
+.knockout-round:nth-child(4){
+  padding-top:300px;
 }
 
 .knockout-round:nth-child(4) .knockout-match{
-  margin-bottom:240px;
+  margin-bottom:520px;
+}
+
+.knockout-round:nth-child(5),
+.knockout-round:nth-child(6){
+  padding-top:360px;
 }
