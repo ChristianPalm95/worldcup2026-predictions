@@ -190,8 +190,6 @@ Object.keys(GROUPS).forEach(group => {
   renderGroupTable(group);
 });
 
-loadKnockoutPrediction(data);
-
 }
 
 async function savePredictionForm() {
@@ -386,6 +384,8 @@ console.log("Loaded", data);
 Object.keys(GROUPS).forEach(group => {
   renderGroupTable(group);
 });
+
+loadKnockoutPrediction(data);
 
   } catch(error) {
 
