@@ -253,6 +253,11 @@ async function savePredictionForm() {
 
   });
 
+  data.knockout =
+  collectKnockoutPredictions(
+    existingData.knockout || {}
+  );
+
   try {
 
     console.log("Saving...", data);
