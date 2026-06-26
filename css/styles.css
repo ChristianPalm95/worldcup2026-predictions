@@ -465,7 +465,7 @@ input[type="number"] {
 
 .knockout-team-row{
   display:grid;
-  grid-template-columns:1fr 42px 42px;
+  grid-template-columns:1fr 42px;
   gap:8px;
   align-items:center;
   margin:6px 0;
