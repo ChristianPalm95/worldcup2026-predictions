@@ -123,41 +123,45 @@ function renderKnockoutMatch(match) {
         }
       </div>
 
-      <div class="knockout-team-row">
-        <span
-          id="${match.id}_home_team"
-          data-team-ref="${match.home}"
-        >
-          ${match.home}
-        </span>
+      <div class="knockout-score-row">
 
-        <input
-          type="number"
-          min="0"
-          class="knockout-score"
-          id="${match.id}_home"
-          ${locked ? "disabled" : ""}
-          oninput="refreshKnockoutWinners()"
-        >
-      </div>
+  <div class="knockout-team-row">
+    <span
+      id="${match.id}_home_team"
+      data-team-ref="${match.home}"
+    >
+      ${match.home}
+    </span>
 
-      <div class="knockout-team-row">
-        <span
-          id="${match.id}_away_team"
-          data-team-ref="${match.away}"
-        >
-          ${match.away}
-        </span>
+    <input
+      type="number"
+      min="0"
+      class="knockout-score"
+      id="${match.id}_home"
+      ${locked ? "disabled" : ""}
+      oninput="refreshKnockoutWinners()"
+    >
+  </div>
 
-        <input
-          type="number"
-          min="0"
-          class="knockout-score"
-          id="${match.id}_away"
-          ${locked ? "disabled" : ""}
-          oninput="refreshKnockoutWinners()"
-        >
-      </div>
+  <div class="knockout-team-row">
+    <span
+      id="${match.id}_away_team"
+      data-team-ref="${match.away}"
+    >
+      ${match.away}
+    </span>
+
+    <input
+      type="number"
+      min="0"
+      class="knockout-score"
+      id="${match.id}_away"
+      ${locked ? "disabled" : ""}
+      oninput="refreshKnockoutWinners()"
+    >
+  </div>
+
+</div>
     </div>
   `;
 }
