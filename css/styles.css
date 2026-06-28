@@ -548,7 +548,7 @@ input[type="number"] {
 }
 
 .knockout-round:nth-child(3) .knockout-match{
-  margin-bottom:400px;
+  margin-bottom:450px;
 }
 
 .knockout-round:nth-child(4){
@@ -556,12 +556,12 @@ input[type="number"] {
 }
 
 .knockout-round:nth-child(4) .knockout-match{
-  margin-bottom:520px;
+  margin-bottom:800px;
 }
 
 .knockout-round:nth-child(5),
 .knockout-round:nth-child(6){
-  padding-top:800px;
+  padding-top:1000px;
 }
 
 .knockout-round:nth-child(4) .knockout-match:last-child,
