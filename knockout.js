@@ -27,25 +27,37 @@ const KNOCKOUT_MATCHES = [
 { id:"K85", round:"Round of 32", kickoff:"2026-07-03T05:00:00+02:00", home:"Switzerland", away:"Algeria" },
 { id:"K87", round:"Round of 32", kickoff:"2026-07-04T03:30:00+02:00", home:"Ghana", away:"Colombia" },
 
-  { id:"K90", round:"Round of 16", kickoff:"2026-07-04T19:00:00+02:00", home:"Winner K73", away:"Winner K75" },
-  { id:"K89", round:"Round of 16", kickoff:"2026-07-04T23:00:00+02:00", home:"Winner K74", away:"Winner K77" },
-  { id:"K91", round:"Round of 16", kickoff:"2026-07-05T22:00:00+02:00", home:"Winner K76", away:"Winner K78" },
-  { id:"K92", round:"Round of 16", kickoff:"2026-07-06T02:00:00+02:00", home:"Winner K79", away:"Winner K80" },
-  { id:"K93", round:"Round of 16", kickoff:"2026-07-06T21:00:00+02:00", home:"Winner K83", away:"Winner K84" },
-  { id:"K94", round:"Round of 16", kickoff:"2026-07-07T02:00:00+02:00", home:"Winner K81", away:"Winner K82" },
-  { id:"K95", round:"Round of 16", kickoff:"2026-07-07T18:00:00+02:00", home:"Winner K86", away:"Winner K88" },
-  { id:"K96", round:"Round of 16", kickoff:"2026-07-07T22:00:00+02:00", home:"Winner K85", away:"Winner K87" },
+ // ----- ROUND OF 16 -----
 
-  { id:"K97", round:"Quarterfinals", kickoff:"2026-07-09T22:00:00+02:00", home:"Winner K89", away:"Winner K90" },
-  { id:"K98", round:"Quarterfinals", kickoff:"2026-07-10T21:00:00+02:00", home:"Winner K93", away:"Winner K94" },
-  { id:"K99", round:"Quarterfinals", kickoff:"2026-07-11T23:00:00+02:00", home:"Winner K91", away:"Winner K92" },
-  { id:"K100", round:"Quarterfinals", kickoff:"2026-07-12T03:00:00+02:00", home:"Winner K95", away:"Winner K96" },
+{ id:"K89", round:"Round of 16", kickoff:"2026-07-04T23:00:00+02:00", home:"Winner K74", away:"Winner K77" },
+{ id:"K90", round:"Round of 16", kickoff:"2026-07-04T19:00:00+02:00", home:"Winner K73", away:"Winner K75" },
 
-  { id:"K101", round:"Semifinals", kickoff:"2026-07-14T21:00:00+02:00", home:"Winner K97", away:"Winner K98" },
-  { id:"K102", round:"Semifinals", kickoff:"2026-07-15T21:00:00+02:00", home:"Winner K99", away:"Winner K100" },
+{ id:"K93", round:"Round of 16", kickoff:"2026-07-06T21:00:00+02:00", home:"Winner K83", away:"Winner K84" },
+{ id:"K94", round:"Round of 16", kickoff:"2026-07-07T02:00:00+02:00", home:"Winner K81", away:"Winner K82" },
 
-  { id:"K103", round:"Bronze Final", kickoff:"2026-07-18T23:00:00+02:00", home:"Runner-up K101", away:"Runner-up K102" },
-  { id:"K104", round:"Final", kickoff:"2026-07-19T21:00:00+02:00", home:"Winner K101", away:"Winner K102" }
+{ id:"K91", round:"Round of 16", kickoff:"2026-07-05T22:00:00+02:00", home:"Winner K76", away:"Winner K78" },
+{ id:"K92", round:"Round of 16", kickoff:"2026-07-06T02:00:00+02:00", home:"Winner K79", away:"Winner K80" },
+
+{ id:"K95", round:"Round of 16", kickoff:"2026-07-07T18:00:00+02:00", home:"Winner K86", away:"Winner K88" },
+{ id:"K96", round:"Round of 16", kickoff:"2026-07-07T22:00:00+02:00", home:"Winner K85", away:"Winner K87" },
+
+// ----- QUARTERFINALS -----
+
+{ id:"K97", round:"Quarterfinals", kickoff:"2026-07-09T22:00:00+02:00", home:"Winner K89", away:"Winner K90" },
+{ id:"K98", round:"Quarterfinals", kickoff:"2026-07-10T21:00:00+02:00", home:"Winner K93", away:"Winner K94" },
+
+{ id:"K99", round:"Quarterfinals", kickoff:"2026-07-11T23:00:00+02:00", home:"Winner K91", away:"Winner K92" },
+{ id:"K100", round:"Quarterfinals", kickoff:"2026-07-12T03:00:00+02:00", home:"Winner K95", away:"Winner K96" },
+
+// ----- SEMIFINALS -----
+
+{ id:"K101", round:"Semifinals", kickoff:"2026-07-14T21:00:00+02:00", home:"Winner K97", away:"Winner K98" },
+{ id:"K102", round:"Semifinals", kickoff:"2026-07-15T21:00:00+02:00", home:"Winner K99", away:"Winner K100" },
+
+// ----- BRONZE + FINAL -----
+
+{ id:"K103", round:"Bronze Final", kickoff:"2026-07-18T23:00:00+02:00", home:"Runner-up K101", away:"Runner-up K102" },
+{ id:"K104", round:"Final", kickoff:"2026-07-19T21:00:00+02:00", home:"Winner K101", away:"Winner K102" }
 ];
 
 function buildKnockoutStage() {
