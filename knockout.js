@@ -1,23 +1,31 @@
 const KNOCKOUT_MATCHES = [
- { id:"K73", round:"Round of 32", kickoff:"2026-06-28T21:00:00+02:00", home:"South Africa", away:"Canada" },
-{ id:"K76", round:"Round of 32", kickoff:"2026-06-29T19:00:00+02:00", home:"Brazil", away:"Japan" },
+// ----- LEFT SIDE -----
+
 { id:"K74", round:"Round of 32", kickoff:"2026-06-29T22:30:00+02:00", home:"Germany", away:"Paraguay" },
+{ id:"K77", round:"Round of 32", kickoff:"2026-06-30T23:00:00+02:00", home:"France", away:"Sweden" },
+
+{ id:"K73", round:"Round of 32", kickoff:"2026-06-28T21:00:00+02:00", home:"South Africa", away:"Canada" },
 { id:"K75", round:"Round of 32", kickoff:"2026-06-30T03:00:00+02:00", home:"Netherlands", away:"Morocco" },
 
+{ id:"K83", round:"Round of 32", kickoff:"2026-07-03T01:00:00+02:00", home:"Portugal", away:"Croatia" },
+{ id:"K84", round:"Round of 32", kickoff:"2026-07-02T21:00:00+02:00", home:"Spain", away:"Austria" },
+
+{ id:"K81", round:"Round of 32", kickoff:"2026-07-02T02:00:00+02:00", home:"USA", away:"Bosnia & Herzegovina" },
+{ id:"K82", round:"Round of 32", kickoff:"2026-07-01T22:00:00+02:00", home:"Belgium", away:"Senegal" },
+
+// ----- RIGHT SIDE -----
+
+{ id:"K76", round:"Round of 32", kickoff:"2026-06-29T19:00:00+02:00", home:"Brazil", away:"Japan" },
 { id:"K78", round:"Round of 32", kickoff:"2026-06-30T19:00:00+02:00", home:"Ivory Coast", away:"Norway" },
-{ id:"K77", round:"Round of 32", kickoff:"2026-06-30T23:00:00+02:00", home:"France", away:"Sweden" },
+
 { id:"K79", round:"Round of 32", kickoff:"2026-07-01T03:00:00+02:00", home:"Mexico", away:"Ecuador" },
 { id:"K80", round:"Round of 32", kickoff:"2026-07-01T18:00:00+02:00", home:"England", away:"DR Congo" },
 
-{ id:"K82", round:"Round of 32", kickoff:"2026-07-01T22:00:00+02:00", home:"Belgium", away:"Senegal" },
-{ id:"K81", round:"Round of 32", kickoff:"2026-07-02T02:00:00+02:00", home:"USA", away:"Bosnia & Herzegovina" },
-{ id:"K84", round:"Round of 32", kickoff:"2026-07-02T21:00:00+02:00", home:"Spain", away:"Austria" },
-{ id:"K83", round:"Round of 32", kickoff:"2026-07-03T01:00:00+02:00", home:"Portugal", away:"Croatia" },
+{ id:"K86", round:"Round of 32", kickoff:"2026-07-04T00:00:00+02:00", home:"Argentina", away:"Cape Verde" },
+{ id:"K88", round:"Round of 32", kickoff:"2026-07-03T20:00:00+02:00", home:"Australia", away:"Egypt" },
 
 { id:"K85", round:"Round of 32", kickoff:"2026-07-03T05:00:00+02:00", home:"Switzerland", away:"Algeria" },
-{ id:"K88", round:"Round of 32", kickoff:"2026-07-03T20:00:00+02:00", home:"Australia", away:"Egypt" },
-{ id:"K86", round:"Round of 32", kickoff:"2026-07-04T00:00:00+02:00", home:"Argentina", away:"Cape Verde" },
-{ id:"K87", round:"Round of 32", kickoff:"2026-07-04T03:30:00+02:00", home:"Colombia", away:"Ghana" },
+{ id:"K87", round:"Round of 32", kickoff:"2026-07-04T03:30:00+02:00", home:"Ghana", away:"Colombia" },
 
   { id:"K90", round:"Round of 16", kickoff:"2026-07-04T19:00:00+02:00", home:"Winner K73", away:"Winner K75" },
   { id:"K89", round:"Round of 16", kickoff:"2026-07-04T23:00:00+02:00", home:"Winner K74", away:"Winner K77" },
